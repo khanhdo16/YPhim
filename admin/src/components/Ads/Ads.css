@@ -1,0 +1,12 @@
+.admin-ads-save {
+    float: right;
+    width: 8rem;
+    min-width: max-content;
+}
+
+/* Smartphones ----------- */
+@media only screen and (max-width: 768px) {
+    .admin-ads-panel {
+        width: 100%;
+    }
+}

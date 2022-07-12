@@ -1,0 +1,55 @@
+/* MAIN CONTAINER */
+.admin {
+  display: block;
+}
+
+/* CONTENT CONTAINER */
+.content {
+  padding: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.admin-menu.collapsed + .content {
+  margin-left: 5em;
+}
+
+/* Content loader for grid, list */
+.content-loader {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.content-loader > button {
+  bottom: 2rem;
+  position: fixed;
+  z-index: 4;
+}
+
+/* Smartphones ----------- */
+@media only screen and (max-width: 768px) {
+  /* Styles */
+  .admin-menu + .content {
+    margin-left: 5em;
+  }
+
+  .content {
+    padding: 10px;
+  }
+}
+
+/* Tablets ----------- */
+@media only screen and (min-width: 767.97px) {
+  /* Styles */
+  .admin-menu + .content {
+    margin-left: 5em;
+  }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1119.97px) {
+  /* Styles */
+  .admin-menu + .content {
+    margin-left: 15em;
+  }
+}

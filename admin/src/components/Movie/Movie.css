@@ -1,0 +1,18 @@
+.movie-searchbar {
+    padding: 1rem 0;
+    flex-direction: row-reverse;
+    align-items: center;
+    height: max-content;
+    background: rgba(255, 255, 255, 0.9)
+}
+
+.movie-searchbar .p-sidebar-header {
+    padding: 0.5rem
+}
+
+.movie-searchbar .p-sidebar-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 0;
+}

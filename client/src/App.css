@@ -1,0 +1,23 @@
+main {
+  padding: var(--padding);
+  min-height: var(--min-page-height);
+}
+
+main > *:not(:last-child) {
+  margin-bottom: var(--padding-lg);
+}
+
+.movie-by-country .movie__container__wrapper {
+  --movie-visible-items: 2.5;
+}
+
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-done {
+  opacity: 1;
+  transition: opacity var(--fade-duration) ease-in-out;
+  --fade-duration: 0.5s
+}

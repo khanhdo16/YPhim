@@ -1,0 +1,8 @@
+.admin-imgur-panel .field label {
+    white-space: nowrap;
+}
+
+.admin-settings .p-panel:not(:last-child) {
+    margin-bottom: 1rem;
+}
+

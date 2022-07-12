@@ -1,0 +1,99 @@
+.booklist {
+    margin-top: 1rem;
+    width: 100%;
+    border: 1px solid #c3c4c7;
+    border-spacing: 0;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.booklist-header th {
+    text-align: left;
+    border-bottom: 1px solid #c3c4c7;
+}
+
+.booklist-item td {
+    height: 6rem;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.booklist-header th, .booklist-item td {
+    padding: 1rem;
+}
+
+.booklist-title span, .booklist-image img {
+    cursor: pointer;
+}
+
+.booklist-item:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+
+.booklist-title > span {
+    font-weight: bold;
+}
+
+.booklist-image, .booklist-delete {
+    width: 7%;
+}
+
+.booklist-views, .booklist-published {
+    width: 10%
+}
+
+.booklist-date {
+    width: 15%;
+}
+
+.booklist-image-container {
+    position: relative;
+    height: 100%;
+    padding-bottom: 150%;
+}
+
+.booklist-image-container img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    color: transparent;
+}
+
+/* Smartphones ----------- */
+@media only screen and (max-width: 768px) {
+    /* .booklist-preview {
+        width: calc(100% * 0.66);
+        height: 100%;
+        object-fit: cover;
+        margin-right: 0.5rem
+    }
+
+    .booklist-container {
+        flex: 0 0 100%;
+    }
+
+    .booklist-container:nth-child(-n+3) {
+        margin-top: 0rem;
+    }
+
+    .booklist-container:first-child {
+        margin-top: 0.5rem;
+    } */
+}
+
+/* Tablets ----------- */
+@media only screen and (min-width: 767.97px) and (max-width: 1200px) {
+
+    /* .booklist-container {
+        flex: 0 0 calc((100% - 0.5rem) / 2);
+    }
+
+    .booklist-container:nth-child(-n+3) {
+        margin-top: 0rem;
+    }
+
+    .booklist-container:nth-child(-n+2) {
+        margin-top: 0.5rem;
+    } */
+}

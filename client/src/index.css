@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(180deg, #323232 0%, #000000 100%);
+  min-height: 100vh;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+body .p-skeleton {
+  background: #000;
+}
+
+.noscroll {
+  overflow: hidden !important;
+}
+
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+:root {
+  --accent-color: #eb9c00;
+  --accent-border: 2px solid var(--accent-color);
+  --radius: 0.65rem;
+  --radius-sm: 0.25rem;
+  --radius-lg: 1rem;
+  --padding: 1rem;
+  --padding-xs: 0.25rem;
+  --padding-sm: 0.5rem;
+  --padding-md: 0.75rem;
+  --padding-lg: 1.5rem;
+  --padding-xl: 2rem;
+  --image-height: 13rem;
+  --image-width: calc(2/3 * var(--image-height));
+  --header-height: 5rem;
+  --footer-height: 8rem;
+  --bar-index: 5;
+  --overlay-index: 10;
+  --min-page-height: calc(100vh - var(--header-height) - var(--footer-height));
+}
+
+@media only screen and (max-width: 768px) {
+  :root {
+    --image-height: calc((100vw - 2rem - 1.5rem) * 3/8);
+    --footer-height: 12rem;
+  }
+}
+
+@media only screen and (min-width: 767.97px) and (max-width: 1200px) {
+  :root {
+    --image-height: 11rem;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  :root {
+    --image-height: 20vh;
+  }
+}

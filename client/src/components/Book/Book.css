@@ -1,0 +1,194 @@
+#book {
+    padding: var(--padding);
+    background: linear-gradient(#323232 0%, #131313 100%);
+    border: 1px solid #414141;
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--padding);
+    --columns: 4.2;
+    --column-gaps: calc(var(--padding) * (var(--columns) - 1));
+    --image-width: calc((100% -  var(--column-gaps)) / var(--columns));
+    --image-height: calc(var(--image-width) * 2/3);
+}
+
+.book__header {
+    margin: 0 0 var(--padding) 0;
+}
+
+.book__container__wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    padding-bottom: var(--image-height);
+}
+
+.book__container {
+    overflow: auto hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    scrollbar-color: white transparent;
+}
+
+.book__container::-webkit-scrollbar {
+    display: none;
+}
+
+.book__list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: var(--padding);
+    height: inherit;
+}
+
+.book-item {
+    width: var(--image-width);
+    height: inherit;
+    flex: 0 0 auto;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.book-item:hover .book-item__poster {
+    transform: scale(1.1);
+}
+
+.book-item:hover .book-item__container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    border: 0.125rem solid var(--accent-color);
+    box-sizing: border-box;
+    pointer-events: none
+}
+
+.book-item__container {
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+    height: inherit;
+}
+
+.book-item__poster {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    color: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.p-skeleton.book-item__poster {
+    background: #000;
+}
+
+.book-item__background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(transparent 70%, rgba(0, 0, 0, 0.9) 100%);
+    pointer-events: none;
+}
+
+.book-item__details {
+    position: absolute;
+    top: 5%;
+    left: 0;
+    height: max-content;
+    width: 90%;
+    max-width: 90%;
+}
+
+.book-item__status, .book-item__latest {
+    display: block;
+    width: max-content;
+    padding: var(--padding-xs) var(--padding-sm);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.book-item__status {
+    max-width: 100%;
+    margin-bottom: var(--padding-sm);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    background: rgba(255, 0, 0, 0.7);
+}
+
+.book-item__latest {
+    height: max-content;
+    max-width: 90%;
+    background: rgba(235, 156, 0, 0.8);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+
+.book-item__title {
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    padding: 0 var(--padding-md);
+    margin: 0;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@supports (-webkit-line-clamp: 2) {
+    .book-item__title {
+        white-space: normal;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+}
+
+@media only screen and (max-width: 787px) {
+    #book {
+        margin-bottom: 1rem;
+        --columns: 2.2;
+        --padding: var(--padding-md);
+    }
+
+    .book__header {
+        font-size: 1.3em;
+    }
+
+    .book-item__title {
+        font-size: 0.9em;
+        padding: 0 var(--padding-xs)
+    }
+
+    .book-item__details {
+        top: 0;
+        width: 70%;
+        max-width: 70%;
+    }
+
+    .book-item__latest, .book-item__status {
+        font-size: 0.7em;
+    }
+
+    .book-item__status {
+        padding: var(--padding-xs) var(--padding-xs);
+        margin-bottom: var(--padding-xs);
+    }
+}
+
+@media only screen and (min-width: 767.97px) and (max-width: 1200px) {
+    #book {
+        --columns: 3.5;
+    }
+
+    .book-item__title {
+        font-size: 1em;
+    }
+}

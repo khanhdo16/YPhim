@@ -1,0 +1,51 @@
+#announcement {
+    display: block;
+    width: 100%;
+    height: max-content;
+    margin-top: var(--padding-md);
+    padding: var(--padding-sm) var(--padding);
+    color: #fff;
+    background: rgb(195, 39, 0);
+    font-weight: 500;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#announcement > span {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+
+@keyframes scrolling {
+    0% {
+        transform: translateX(0);
+    }
+    80%, 100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #announcement {
+        box-sizing: border-box;
+        height: calc(var(--padding-sm) * 2 + 1rem);
+    }
+
+    #announcement span {
+        font-size: 0.8rem;
+    }
+
+    #announcement > span.first {
+        display: flex;
+        flex-wrap: nowrap;
+        width: max-content;
+        animation: scrolling 10s linear 0.5s infinite;
+    }
+    
+    #announcement > span.first > span[data-text]::after {
+        content: attr(data-text);
+        padding: 0 2rem;
+    }
+}

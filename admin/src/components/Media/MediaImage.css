@@ -1,0 +1,50 @@
+.media-imagegrid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.media-imagegrid-container {
+    position: relative;
+    flex: 0 0 calc(100% / 6);
+    padding-bottom: calc(100% / 6);
+    cursor: pointer;
+}
+
+.media-imagegrid-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+}
+
+.media-imagegrid-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: white;
+    color: transparent;
+}
+
+/* Smartphones ----------- */
+@media only screen and (max-width: 768px) {
+    .media-imagegrid-container {
+        flex: 0 0 calc(100% / 3);
+        padding-bottom: calc(100% / 3);
+    }
+
+    .media-imagegrid-item {
+        padding: 0.2rem;
+    }
+}
+
+/* Tablets ----------- */
+@media only screen and (min-width: 767.97px) and (max-width: 1200px) {
+    .media-imagegrid-container {
+        flex: 0 0 calc(100% / 4);
+        padding-bottom: calc(100% / 4);
+    }
+
+    .media-imagegrid-item {
+        padding: 0.5rem;
+    }
+}

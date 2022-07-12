@@ -1,0 +1,78 @@
+.imagepicker-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.imagepicker-grid-container {
+    position: relative;
+    flex: 0 0 calc(100% / 6);
+    padding-bottom: calc(100% / 6);
+    cursor: pointer;
+}
+
+.imagepicker-grid-preview:hover {
+    border: 4px solid #007bff;
+}
+
+.imagepicker-grid-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+}
+
+.imagepicker-grid-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: white;
+    color: transparent;
+}
+
+.imagepicker-grid-loader {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.imagepicker-grid-loader > button {
+    bottom: 2rem;
+    position: fixed;
+    z-index: 5;
+}
+
+.imagepicker-dialog {
+    height: 90%
+}
+
+/* Smartphones ----------- */
+@media only screen and (max-width: 768px) {
+    .imagepicker-grid-container {
+        flex: 0 0 calc(100% / 3);
+        padding-bottom: calc(100% / 3);
+    }
+
+    .imagepicker-grid-item {
+        padding: 0.2rem;
+    }
+
+    .imagepicker-search {
+        width: 80%;
+    }
+
+    .imagepicker-search > input {
+        width: 100%;
+    }
+}
+
+/* Tablets ----------- */
+@media only screen and (min-width: 767.97px) and (max-width: 1200px) {
+    .imagepicker-grid-container {
+        flex: 0 0 calc(100% / 4);
+        padding-bottom: calc(100% / 4);
+    }
+
+    .imagepicker-grid-item {
+        padding: 0.5rem;
+    }
+}

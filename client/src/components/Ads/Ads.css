@@ -1,0 +1,94 @@
+#qc {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    gap: var(--padding-lg);
+    transition: all 0.5s ease-in-out;
+    margin: var(--padding-lg) 0;
+    --ad-height: 7rem;
+    --ad-width: calc(var(--ad-height) * 22/5.5);
+    --ad-padding-sm: 0.2rem;
+}
+
+main > #qc:first-child {
+    margin-top: 0;
+}
+
+.qc__aa, .qc__cus__banner, .qc__other {
+    display: inline-flex;
+    position: relative;
+    height: var(--ad-height);
+    overflow: hidden !important;
+}
+
+.qc__other {
+    width: 1px;
+    pointer-events: none !important;
+}
+
+.qc__cus__banner {
+    width: var(--ad-width);
+    flex-shrink: 0;
+}
+
+.qc__cus__banner:nth-child(2),
+.qc__aa:first-child:nth-last-child(3) ~ .qc__cus__banner:nth-child(3) {
+    margin-left: auto;
+}
+
+.qc__cus__banner:nth-child(3),
+.qc__aa:first-child:nth-last-child(3) ~ .qc__cus__banner:nth-child(2) {
+    margin-right: auto;
+}
+
+.qc__cus__banner img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.qc__aa:not(.qc__aa:first-child:nth-last-child(2)),
+.qc__other:not(.qc__other:nth-child(2)) {
+    flex-flow: column nowrap !important;
+    gap: 0.2rem;
+    flex: 1;
+    max-width: 10rem;
+}
+
+.qc__aa:first-child:nth-last-child(2),
+.qc__other:nth-child(2) {
+    width: unset;
+    height: 2rem;
+    flex: 1;
+}
+
+.qc__aa__banner {
+    display: block;
+    border: 0px;
+    padding: 0 !important;
+    width: 100%;
+    height: 1px !important;
+    overflow: hidden;
+    flex: 1 1 auto;
+}
+
+@media only screen and (max-width: 768px) {
+    #qc {
+        margin: var(--padding) 0;
+        gap: var(--padding-sm);
+
+        --ad-width: calc((100vw - 2rem) * 0.75);
+        --ad-height: calc(var(--ad-width) * 5.5/22);
+    }
+
+    #qc.no-margin {
+        margin: 0 0 var(--padding); 
+    }
+
+    .qc__aa:first-child:nth-last-child(2),
+    .qc__other:nth-child(2) {
+        min-width: 100%;
+        height: 2rem;
+        flex: 1 0;
+    }
+}

@@ -1,0 +1,54 @@
+#banner {
+    display: flex;
+    width: 100%;
+    height: var(--image-height);
+    overflow: hidden;
+}
+
+#banner > * {
+    display: inline-block;
+}
+
+#banner *, #banner img {
+    user-select: none
+}
+
+.container {
+    display: flex;
+    gap: var(--padding);
+    flex-wrap: wrap;
+}
+
+.content {
+    width: 80%;
+    flex: 0 0 auto;
+}
+
+.sidebar {
+    width: 1px;
+    flex: 1 0 auto;
+}
+
+
+@media only screen and (max-width: 768px)   {
+    #banner {
+        display: flex;
+        gap: 0;
+    }
+
+    .content, .sidebar {
+        width: 100%
+    }
+}
+
+@media only screen and (min-width: 767.97px) and (max-width: 1200px) and (orientation: portrait) {
+    .content, .sidebar {
+        width: 100%
+    }
+}
+
+@media only screen and (min-width: 767.97px) and (max-width: 1200px) and (orientation: landscape) {
+    .content {
+        width: 75%;
+    }
+}

@@ -1,0 +1,57 @@
+.media-info-panel {
+    height: 100vh;
+    width: 80%;
+}
+
+.media-info-container {
+    height: 100%;
+}
+
+.media-info-preview {
+    position: relative;
+    display: block;
+    border-right: 1px solid #e9ecef;
+    height: 100%;
+    color: transparent;
+}
+
+.media-info-preview > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.media-info-detail-field {
+    margin-bottom: 1rem;
+}
+
+.media-info-detail-label {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.media-info-detail-text {
+    width: 100%;
+}
+
+/* Smartphones ----------- */
+@media only screen and (max-width: 768px) {
+    .media-info-panel {
+        width: 100%;
+    }
+
+    .media-info-preview, .media-info-detail {
+        width: 100%;
+    }
+
+    .media-info-preview {
+        height: max-content;
+        border-right: 0;
+        border-bottom: 1px solid #e9ecef;
+    }
+
+    .media-info-preview > img {
+        height: auto;
+        object-fit: fill;
+    }
+}

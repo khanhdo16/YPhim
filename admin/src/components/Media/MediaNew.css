@@ -1,0 +1,82 @@
+.p-fileupload .p-fileupload-buttonbar {
+    display: flex;
+    align-items: center;
+}
+
+.p-fileupload-row {
+    flex-wrap: wrap;
+    border: 1px solid #dee2e6;
+    padding: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.p-fileupload .p-fileupload-row > div.p-progressbar {
+    flex: 0 0 100%;
+    padding: 0;
+    height: 0.5rem
+}
+
+.p-fileupload .p-fileupload-row > div.admin-upload-preview {
+    position: relative;
+    padding-bottom: 25%;
+    transition: all 0.5s ease-in-out;
+}
+
+.p-fileupload .p-fileupload-row.uploaded > div.admin-upload-preview {
+    padding-bottom: 5rem;
+}
+
+.admin-upload-preview img {
+    position: absolute;
+    height: calc(100% - 2rem);
+    width: calc(100% - 2rem);
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+}
+
+.uploaded .admin-upload-preview img{
+    width: 4rem;
+}
+
+.p-toast-message-text {
+    overflow: hidden;
+    overflow-wrap: break-word;
+}
+
+/* Smartphones ----------- */
+@media only screen and (max-width: 768px) {
+    .p-fileupload .p-fileupload-buttonbar {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .admin-upload-size {
+        margin-top: 0.5rem;
+    }
+
+    .p-fileupload .p-fileupload-buttonbar .p-button {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .p-fileupload .p-fileupload-row.uploaded > div.p-progressbar {
+        flex: 0 0 100%;
+    }
+
+    .p-fileupload .p-fileupload-row.uploaded > div {
+        flex: 1 1;
+    }
+
+    .p-fileupload .p-fileupload-row > div.admin-upload-preview {
+        padding-bottom: 100%;
+        width: 100%
+    }
+
+    .p-fileupload-row > div.p-fileupload-filename {
+        width: 100%
+    }
+
+    .p-toast {
+        width: 20rem;
+    }
+}

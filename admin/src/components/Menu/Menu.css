@@ -1,0 +1,158 @@
+/* --ADMIN SIDEBAR MENU-- */
+/* opened */
+.admin-menu {
+  width: 15em;
+  max-width: 500px;
+  height: 100%;
+  padding: 20px 10px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #b8c6db;
+  background-image: linear-gradient(315deg, #b8c6dba2 0%, #f5f7fa 80%);
+  border-radius: 0 20px 20px 0;
+  transition: width 0.2s ease-in-out;
+}
+
+/* collapsed */
+.admin-menu.collapsed {
+  width: 5em;
+}
+
+
+
+/* ADMIN BOTTOM ACTIONS */
+.admin-menu .admin-menu-actions {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.admin-menu .admin-menu-logout {
+  width: 100%;
+}
+
+.admin-menu .admin-menu-logout .p-button-label {
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.admin-menu .p-button.admin-menu-close {
+  flex: 0 0 auto;
+}
+
+
+/* collapsed */
+.admin-menu.collapsed .admin-menu-actions {
+  flex-direction: column;
+}
+
+.admin-menu.collapsed .admin-menu-logout {
+  width: 2.357rem;
+}
+
+.admin-menu.collapsed .admin-menu-logout .p-button-icon {
+  margin: 0 auto;
+}
+
+.admin-menu.collapsed .admin-menu-logout .p-button-label {
+  width: 0;
+  max-width: 0;
+  overflow: hidden;
+}
+
+
+
+/* --ADMIN MENU SECTION DIVIDER */
+.admin-menu .p-panelmenu .p-divider.p-divider-horizontal::before {
+  border-top: 1px solid black;
+}
+
+
+/* --ADMIN MENU LINKS-- */
+/* container */
+.admin-menu .admin-menu-items {
+  width: 100%;
+  height: calc(100% - 20px - 2.357rem);
+  overflow-y: scroll;
+  margin-bottom: 1rem;
+  /* Hide scrollbar */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* hide scrollbar Chrome, Safari */
+.admin-menu-items::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* --ADMIN MENU LINKS CONTAINER-- */
+.admin-menu .p-panelmenu {
+  width: 100%;
+}
+
+
+/* --ADMIN MENU LINKS ITEM-- */
+/* highlighted links */
+.admin-menu .p-panelmenu .p-panelmenu-header.p-highlight > a {
+  background: #e1e1e1;
+}
+
+
+.admin-menu .p-panelmenu .p-panelmenu-header-link {
+  background: none;
+  border: none;
+}
+
+.admin-menu .p-panelmenu .p-panelmenu-header-link:focus {
+  box-shadow: none;
+}
+
+
+/* menu item text */
+.admin-menu .p-panelmenu .p-panelmenu-header-link .p-menuitem-text,
+.admin-menu .p-panelmenu .p-menuitem-link .p-menuitem-text {
+  line-height: normal;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.admin-menu.collapsed .p-panelmenu .p-panelmenu-header-link .p-menuitem-text,
+.admin-menu.collapsed .p-panelmenu .p-menuitem-link .p-menuitem-text {
+  width: 0;
+}
+
+/* menu item prefix icon */
+.admin-menu.collapsed .p-panelmenu .p-panelmenu-header-link .p-menuitem-icon,
+.admin-menu.collapsed .p-panelmenu .p-menuitem-link .p-menuitem-icon {
+  margin-right: 0;
+}
+
+.admin-menu.collapsed .p-panelmenu .p-menuitem-link {
+  padding: 1rem 1.25rem;
+}
+
+/* ADMIN DROPDOWN LINK */
+.p-menuitem-link.active {
+  background: #93c7ff;
+}
+
+/* ADMIN MENU EXTRA */
+/* Hide UIKit default dropdown icon, container */
+.admin-menu-single .p-panelmenu-content,
+.admin-menu .p-panelmenu-icon {
+  display: none;
+}
+
+/* transition */
+.admin-menu * {
+  transition: all 0.2s ease-in-out;
+}

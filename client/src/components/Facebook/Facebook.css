@@ -1,0 +1,32 @@
+#facebook, #facebook-page {
+    width: 100%;
+    height: max-content;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+#facebook {
+    margin-bottom: var(--padding);
+}
+
+#facebook.p-skeleton {
+    min-height: 20rem;
+}
+
+#facebook-page.p-skeleton {
+    min-height: 7rem;
+}
+
+#facebook:not(.p-skeleton), #facebook-page:not(.p-skeleton) {
+    background: white;
+}
+
+#facebook *, #facebook-page * {
+    width: inherit !important;
+    transition: all 0.5s ease-in-out;
+}
+
+#facebook.p-skeleton > div, #facebook-page.p-skeleton > div {
+    height: 0;
+}

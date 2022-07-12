@@ -1,0 +1,13 @@
+.admin-auth-msg-container {
+    width: 100%;
+    height: calc(100vh - 40px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-auth-msg-container .p-card {
+    text-align: center;
+    width: 25rem;
+    max-width: calc(100% - 1rem)
+}

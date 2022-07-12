@@ -1,0 +1,62 @@
+#fav {
+    position: relative;
+    height: var(--image-height);
+    width: var(--image-width);
+    border: 2px solid var(--accent-color);
+    border-radius: var(--radius);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#fav, #fav * {
+    transition: all 0.2s ease-in-out;
+}
+
+#fav .p-skeleton {
+    background-color: #000;
+}
+
+.fav__poster {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    color: transparent;
+}
+
+.fav__icon {
+    position: absolute;
+    height: 4.5rem;
+    bottom: 0;
+    right: 0;
+}
+
+.fav__title {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: var(--padding-sm);
+    top: 0;
+    left: 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffc227;
+    background: linear-gradient(0deg, rgba(255,255,255,0) 50%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+/* Smartphones ----------- */
+@media only screen and (max-width: 768px) {
+    #fav {
+        width: var(--image-width);
+        height: var(--image-height);
+        flex-shrink: 0;
+    }
+
+    .fav__icon {
+        height: 2.5rem;
+    }
+
+    .fav__title {
+        font-size: 1.1em;
+    }
+}
